@@ -450,3 +450,119 @@ body {
     font-size: 2em;
     color: #2a9d8f;
 }
+
+/** Contacto **/
+
+.header_contacto {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    background: url('src/contacto.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.form-section {
+    margin: 20px 0;
+}
+
+.form-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.form-group .radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group .radio-group input {
+    margin-right: 5px;
+}
+
+.form-group .radio-group label {
+    margin-right: 20px;
+}
+
+.form-group .date-time-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group .date-time-group input {
+    width: 48%;
+}
+
+.submit-btn {
+    text-align: center;
+}
+
+.submit-btn button {
+    background-color: #8bc34a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn button:hover {
+    background-color: #7cb342;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .form-group .date-time-group input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
