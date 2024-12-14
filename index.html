@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes Raíces</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="index.html" style="text-decoration: none;">
+            <div class="logo">BIENES<span>RAICES</span></div>
+        </a>
+        <div class="nav">
+            <a href="indeSx.html">Inicio</a>
+            <a href="productos.html">Anuncios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="acerca.html">Nosotros</a>
+            <a href="#" id="ver-carrito">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
+        </div>
+        <div class="content">
+            <h1>Venta de Casas y Departamentos</h1>
+            <p>Exclusivos de Lujo</p>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <div id="carrito-modal">
+        <h2>Carrito de Propiedades</h2>
+        <div id="lista-carrito"></div>
+        <div id="total-carrito">Total: $0</div>
+        <button class="boton-carrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <button class="boton-carrito" onclick="finalizarCompra()">Finalizar Compra</button>
+        <button class="boton-carrito" onclick="cerrarCarrito()">Cerrar</button>
+    </div>
+    <div class="container">
+        <div class="header2">
+            <h1>Más Sobre Nosotros</h1>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>SEGURIDAD</h3>
+                <p>En nuestra empresa, la seguridad de nuestros clientes es una prioridad
+                    fundamental. Trabajamos con los más altos estándares de seguridad tanto en la
+                    adquisición de propiedades como en la protección de nuestros proyectos. Todas
+                    nuestras casas y departamentos exclusivos de lujo cuentan con sistemas de
+                    seguridad de última tecnología, como vigilancia las 24 horas, accesos
+                    controlados y tecnología de punta en cámaras y alarmas. Además, seleccionamos
+                    ubicaciones en zonas con baja criminalidad y rodeadas de un entorno seguro,
+                    garantizando que nuestros clientes disfruten no solo de la calidad de la
+                    propiedad, sino también de un ambiente tranquilo y protegido.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-money-bill-wave"></i>
+                <h3>PRECIO</h3>
+                <p>Nos especializamos en ofrecer propiedades de lujo con una excelente relación
+                    calidad-precio. A través de una investigación exhaustiva del mercado y una
+                    gestión eficiente de recursos, conseguimos precios competitivos sin comprometer
+                    la calidad ni el diseño exclusivo que caracteriza a nuestras casas y
+                    departamentos. A pesar de que nuestras propiedades están en el segmento de
+                    lujo, trabajamos para que nuestros precios sean accesibles y justos, brindando
+                    un valor incomparable por cada inversión realizada. Creemos que nuestros
+                    clientes merecen lo mejor, y nos aseguramos de que su experiencia de compra
+                    sea financieramente satisfactoria.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-clock"></i>
+                <h3>A TIEMPO</h3>
+                <p>La puntualidad es un valor clave en nuestra empresa. Nos comprometemos a
+                    entregar todas nuestras propiedades en los plazos establecidos, sin retrasos,
+                    respetando los tiempos de nuestros clientes y asegurando que cada detalle de
+                    la construcción o remodelación se complete de acuerdo con lo pactado.
+                    Nuestros proyectos están diseñados para cumplir con los más altos estándares
+                    de calidad en tiempo récord, desde la venta hasta la entrega final. Gracias
+                    a nuestra planificación eficiente y a un equipo de trabajo altamente
+                    capacitado, garantizamos que cada propiedad exclusiva sea entregada a tiempo,
+                    sin sacrificar la excelencia que nos caracteriza.</p>
+            </div>
+        </div>
+        <div class="properties">
+            <h2>Casas y Depas en Venta</h2>
+            <div class="property-list">
+                <div class="property">
+                    <img alt="Casa con Lago Privado" height="300"
+                        src="src/productos/4q70cqsvm9Y3HNFZ0gn7Po2reFe78Yj431tJp77E4AeqcGynA.jpg" width="400" />
+                    <div class="property-details">
+                        <h4>Casa con Lago Privado</h4>
+                        <p>Ubicada en un entorno exclusivo, esta impresionante casa cuenta con un
+                            lago privado que la rodea, proporcionando una vista única y una
+                            atmósfera de serenidad incomparable. Disfrute de la tranquilidad
+                            al caminar por sus jardines privados junto al agua, con acceso directo
+                            al lago para actividades recreativas o simplemente para relajarse en
+                            un paisaje natural. Con amplios espacios interiores y acabados de alta
+                            gama, esta propiedad es el lugar ideal para quienes buscan un estilo
+                            de vida único, rodeado de lujo y naturaleza.</p>
+                        <p class="price">$9,000,000 USD</p>
+                        <div class="icons">
+                            <i class="fas fa-bed"></i>
+                            3
+                            <i class="fas fa-car"></i>
+                            4
+                            <i class="fas fa-bath"></i>
+                            3
+                        </div>
+                        <a class="btn" href="javascript:void(0)" onclick="openModal2()">Ver Propiedad</a>
+                        <div id="myModal" class="modal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
+                        <script src="js/scripts.js"></script>
+                    </div>
+                </div>
+                <div class="property">
+                    <img alt="Casa con Terminados de Lujo" height="300"
+                        src="src/productos/RZH4yqAyf9QlDq9BuSgOwJmgALWuSb41elDZ9OyTbaOSOD5TA.jpg" width="400" />
+                    <div class="property-details">
+                        <h4>Casa con Terminados de Lujo</h4>
+                        <p>Esta espectacular propiedad destaca por sus acabados de lujo, que
+                            incluyen pisos de mármol, detalles en madera fina y tecnologías de
+                            última generación en cada rincón. Cada habitación ha sido diseñada
+                            para ofrecer la máxima comodidad, elegancia y funcionalidad. Desde
+                            las modernas cocinas gourmet hasta los baños equipados con lo mejor
+                            en grifería y accesorios, cada detalle ha sido cuidadosamente
+                            seleccionado para crear un hogar de lujo donde se pueda disfrutar
+                            del estilo de vida más exclusivo.</p>
+                        <p class="price">$4,500,000 USD</p>
+                        <div class="icons">
+                            <i class="fas fa-bed"></i>
+                            3
+                            <i class="fas fa-car"></i>
+                            4
+                            <i class="fas fa-bath"></i>
+                            3
+                        </div>
+                        <a class="btn" href="javascript:void(0)" onclick="openModal()">Ver Propiedad</a>
+                        <div id="myModal" class="modal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
+                        <script src="js/scripts.js"></script>
+                    </div>
+                </div>
+                <div class="property">
+                    <img alt="Casa con Piscina Privada" height="300"
+                        src="src/productos/CYwtXmg49FahIRIj4Dn1up6JVJyfCY8dFtWABvCgm41Lnh8JA.jpg" width="400" />
+                    <div class="property-details">
+                        <h4>Casa con Piscina Privada</h4>
+                        <p>Viva la experiencia de lujo y comodidad con esta increíble casa que
+                            cuenta con una piscina privada de diseño moderno. Rodeada de amplias
+                            terrazas y jardines, es el lugar perfecto para relajarse, hacer
+                            ejercicio o disfrutar de una tarde soleada con amigos y familiares.
+                            Además de su magnífica piscina, la propiedad ofrece espacios amplios
+                            y elegantes, con un diseño arquitectónico que maximiza la luminosidad
+                            natural y las vistas al entorno. Esta es una casa pensada para quienes
+                            desean disfrutar de la exclusividad y el confort en cada momento.</p>
+                        <p class="price">$3,000,000 USD</p>
+                        <div class="icons">
+                            <i class="fas fa-bed"></i>
+                            3
+                            <i class="fas fa-car"></i>
+                            4
+                            <i class="fas fa-bath"></i>
+                            3
+                        </div>
+                        <a class="btn" href="javascript:void(0)" onclick="openModal3()">Ver Propiedad</a>
+                        <div id="myModal" class="modal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
+                        <script src="js/scripts.js"></script>
+                    </div>
+                </div>
+            </div>
+            <a class="btn" href="productos.html"
+                style="background-color: #2a9d8f; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+                Ver Todas
+            </a>
+        </div>
+        <div class="cta">
+            <h2>Encuentra la casa de tus sueños</h2>
+            <p>Llena el formulario de contacto y un asesor se pondrá en contacto contigo a la brevedad
+            </p>
+            <a class="btn" href="contacto.html">Contáctanos</a>
+        </div>
+        <div class="blog-testimonials">
+            <div class="blog">
+                <h3>Nuestro Blog</h3>
+                <div class="blog-item">
+                    <img alt="Terraza en el techo de tu casa" height="100"
+                        src="src/blog/HsgrJTwe9fhvmUH1KMe0CLlA2kwjCvPQeTvQkar6i9OF5MkPB.jpg" width="150" />
+                    <div class="details">
+                        <h4>Terraza en el techo de tu casa</h4>
+                        <p>Escrito el: 20/05/2020 por: Sebastian</p>
+                        <p>Consejos para construir una terraza en el techo de tu casa con los mejores materiales y
+                            ahorrando dinero
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <img alt="Guía para la decoración de tu hogar" height="100"
+                        src="src/blog/bLS3Pf0LfeWFdomCdp4GabUz6mEkVJs05yUnDz72gafP5MkPB.jpg" width="150" />
+                    <div class="details">
+                        <h4>Guía para la decoración de tu hogar</h4>
+                        <p>Escrito el: 20/10/2021 por: Jhen</p>
+                        <p>Maximiza el espacio en tu hogar con esta guía, aprende a combinar muebles y colores para
+                            darle vida a tu espacio
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials">
+                <h3>Testimoniales</h3>
+                <div class="testimonial">
+                    <p>El personal se comportó de una excelente forma, muy buena atención y la casa que me ofrecieron
+                        cumple con todas mis expectativas.
+                    </p>
+                    <p> - Juan De la torre</p>
+                </div>
+            </div>
+        </div>
+
+        <p>Esta página ha sido visitada <span class="contador" id="contador"></span> veces.</p>
+        <script src="js/contador.js"></script>
+
+        <div class="footer">
+            <div>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Anuncios</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="acerca.html">Nosotros</a>
+            </div>
+            <p>&copy; 2024 Bienes Raíces. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+
+</html>
