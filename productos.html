@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes Raíces</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header_productos">
+        <a href="index.html" style="text-decoration: none;">
+            <div class="logo">BIENES<span>RAICES</span></div>
+        </a>
+        <div class="nav">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Anuncios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="acerca.html">Nosotros</a>
+            <a href="#" id="ver-carrito">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <div id="carrito-modal">
+        <h2>Carrito de Propiedades</h2>
+        <div id="lista-carrito"></div>
+        <div id="total-carrito">Total: $0</div>
+        <button class="boton-carrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <button class="boton-carrito" onclick="finalizarCompra()">Finalizar Compra</button>
+        <button class="boton-carrito" onclick="cerrarCarrito()">Cerrar</button>
+    </div>
+
+    <div class="container">
+        <h2>
+            Casas y Depas en Venta
+        </h2>
+        <div class="property-grid">
+            <div class="property-card">
+                <img alt="Casa de lujo en el lago con excelente vista" height="400"
+                    src="src/productos/4q70cqsvm9Y3HNFZ0gn7Po2reFe78Yj431tJp77E4AeqcGynA.jpg" width="600" />
+                <div class="property-info">
+                    <h3>Casa con Lago Privado</h3>
+                    <p>Ubicada en un entorno exclusivo, esta impresionante casa cuenta con un
+                        lago privado que la rodea, proporcionando una vista única y una
+                        atmósfera de serenidad incomparable. Disfrute de la tranquilidad
+                        al caminar por sus jardines privados junto al agua, con acceso directo
+                        al lago para actividades recreativas o simplemente para relajarse en
+                        un paisaje natural. Con amplios espacios interiores y acabados de alta
+                        gama, esta propiedad es el lugar ideal para quienes buscan un estilo
+                        de vida único, rodeado de lujo y naturaleza.</p>
+                    <div class="price">
+                        $9,0000,000 USD
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-bath">
+                        </i>
+                        3
+                        <i class="fas fa-car">
+                        </i>
+                        4
+                        <i class="fas fa-bed">
+                        </i>
+                        3
+                    </div>
+                    <a class="btn" href="javascript:void(0)" onclick="openModal2()">Ver Propiedad</a>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                    <script src="js/scripts.js"></script>
+                </div>
+            </div>
+            <div class="property-card">
+                <img alt="Casa terminados de lujo con excelente vista" height="400"
+                    src="src/productos/RZH4yqAyf9QlDq9BuSgOwJmgALWuSb41elDZ9OyTbaOSOD5TA.jpg" width="600" />
+                <div class="property-info">
+                    <h3>Casa con Terminados de Lujo</h3>
+                    <p>Esta espectacular propiedad destaca por sus acabados de lujo, que
+                        incluyen pisos de mármol, detalles en madera fina y tecnologías de
+                        última generación en cada rincón. Cada habitación ha sido diseñada
+                        para ofrecer la máxima comodidad, elegancia y funcionalidad. Desde
+                        las modernas cocinas gourmet hasta los baños equipados con lo mejor
+                        en grifería y accesorios, cada detalle ha sido cuidadosamente
+                        seleccionado para crear un hogar de lujo donde se pueda disfrutar
+                        del estilo de vida más exclusivo.</p>
+                    <div class="price">
+                        $4,500,000 USD
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-bath">
+                        </i>
+                        3
+                        <i class="fas fa-car">
+                        </i>
+                        3
+                        <i class="fas fa-bed">
+                        </i>
+                        4
+                    </div>
+                    <a class="btn" href="javascript:void(0)" onclick="openModal()">Ver Propiedad</a>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                    <script src="js/scripts.js"></script>
+                </div>
+            </div>
+            <div class="property-card">
+                <img alt="Casa con alberca con excelente vista" height="400"
+                    src="src/productos/CYwtXmg49FahIRIj4Dn1up6JVJyfCY8dFtWABvCgm41Lnh8JA.jpg" width="600" />
+                <div class="property-info">
+                    <h3>Casa con Piscina Privada</h3>
+                    <p>Viva la experiencia de lujo y comodidad con esta increíble casa que
+                        cuenta con una piscina privada de diseño moderno. Rodeada de amplias
+                        terrazas y jardines, es el lugar perfecto para relajarse, hacer
+                        ejercicio o disfrutar de una tarde soleada con amigos y familiares.
+                        Además de su magnífica piscina, la propiedad ofrece espacios amplios
+                        y elegantes, con un diseño arquitectónico que maximiza la luminosidad
+                        natural y las vistas al entorno. Esta es una casa pensada para quienes
+                        desean disfrutar de la exclusividad y el confort en cada momento.</p>
+                    <div class="price">
+                        $3,0000,000 USD
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-bath">
+                        </i>
+                        3
+                        <i class="fas fa-car">
+                        </i>
+                        3
+                        <i class="fas fa-bed">
+                        </i>
+                        4
+                    </div>
+                    <a class="btn" href="javascript:void(0)" onclick="openModal3()">Ver Propiedad</a>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                    <script src="js/scripts.js"></script>
+                </div>
+            </div>
+            <div class="property-card">
+                <img alt="Casa con alberca con excelente vista" height="400"
+                    src="src/productos/jw3q0X2f6ES8Fy9enEwVAYdLbxLy8CG1B5JXaFWJGAc9IE5TA.jpg" width="600" />
+                <div class="property-info">
+                    <h3>Casa con Excelente Vista</h3>
+                    <p>Esta impresionante propiedad ofrece una vista panorámica incomparable, que
+                        abarca desde montañas hasta la costa, dependiendo de la ubicación. Cada
+                        ventana ha sido estratégicamente colocada para capturar lo mejor del
+                        paisaje, creando un ambiente luminoso y abierto. Las áreas comunes y las
+                        habitaciones privadas se conectan con el exterior para que pueda disfrutar
+                        de estas vistas espectaculares desde cualquier rincón de la casa. Un
+                        verdadero paraíso visual para quienes buscan un hogar con vistas que quitan
+                        el aliento.Casa en el lago con excelente vista, acabados de lujo a un
+                        excelente precio
+                    </p>
+                    <div class="price">
+                        $5,700,000 USD
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-bath">
+                        </i>
+                        3
+                        <i class="fas fa-car">
+                        </i>
+                        3
+                        <i class="fas fa-bed">
+                        </i>
+                        4
+                    </div>
+                    <a class="btn" href="javascript:void(0)" onclick="openModal4()">Ver Propiedad</a>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                    <script src="js/scripts.js"></script>
+                </div>
+            </div>
+            <div class="property-card">
+                <img alt="Casa con alberca con excelente vista" height="400" src="src/productos/anuncio6.jpg"
+                    width="600" />
+                <div class="property-info">
+                    <h3>Casa con Espectacular Entorno de Paisajes</h3>
+                    <p>Rodeada por una exuberante naturaleza, esta casa se encuentra en un entorno
+                        espectacular, donde los paisajes montañosos, boscosos y jardines privados
+                        crean un ambiente único. Disfrute de la tranquilidad de su entorno natural
+                        mientras se relaja en su amplio jardín o explora los alrededores. Con un
+                        diseño arquitectónico que se integra perfectamente con la naturaleza, esta
+                        propiedad ofrece una experiencia de lujo en un entorno lleno de belleza
+                        natural, convirtiéndola en un lugar perfecto para aquellos que buscan paz
+                        y exclusividad.</p>
+                    <div class="price">
+                        $3,000,000 USD
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-bath">
+                        </i>
+                        3
+                        <i class="fas fa-car">
+                        </i>
+                        3
+                        <i class="fas fa-bed">
+                        </i>
+                        4
+                    </div>
+                    <a class="btn" href="javascript:void(0)" onclick="openModal5()">Ver Propiedad</a>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                    <script src="js/scripts.js"></script>
+                </div>
+            </div>
+            <div class="property-card">
+                <img alt="Casa con alberca con excelente vista" height="400"
+                    src="src/productos/wanerfKKCHqVi0BcYydAfRLkpbNzjyVpQtkO8roeHRmsjQkPB.jpg" width="600" />
+                <div class="property-info">
+                    <h3>Casa de Estilo Moderno y Elegante:</h3>
+                    <p>Con un diseño arquitectónico contemporáneo, esta casa de lujo combina lo mejor de la
+                        modernidad con elegancia y funcionalidad. Amplias áreas abiertas, techos altos y una
+                        distribución de espacios que invita a disfrutar de cada rincón de la propiedad. Equipadas
+                        con lo último en tecnología, la casa incluye sistemas inteligentes de control, iluminación
+                        de diseño, y acabados de primera calidad. Ideal para aquellos que buscan vivir con estilo
+                        en una propiedad moderna, confortable y con todas las comodidades.</p>
+                    <div class="price">
+                        $6,000,000 USD
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-bath">
+                        </i>
+                        3
+                        <i class="fas fa-car">
+                        </i>
+                        3
+                        <i class="fas fa-bed">
+                        </i>
+                        4
+                    </div>
+                    <a class="btn" href="javascript:void(0)" onclick="openModal6()">Ver Propiedad</a>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                    <script src="js/scripts.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <p>Esta página ha sido visitada <span class="contador" id="contador"></span> veces.</p>
+        <script src="js/contador.js"></script>
+        
+    </div>
+
+    <div class="footer">
+        <div>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Anuncios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="acerca.html">Nosotros</a>
+        </div>
+        <p>&copy; 2024 Bienes Raíces. Todos los derechos reservados.</p>
+    </div>
+    </div>
+</body>
+
+</html>
